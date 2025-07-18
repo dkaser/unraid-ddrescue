@@ -1,9 +1,9 @@
-                      |-----handy-ruler------------------------------------------------------|
-unraid-plugin-template: unraid-ncdu
-unraid-plugin-template:
-unraid-plugin-template: A disk usage analyzer with a text-mode user interface.
-unraid-plugin-template: 
-unraid-plugin-template: Built from https://dev.yorhel.nl/ncdu
-unraid-plugin-template:
-unraid-plugin-template: https://github.com/dkaser/unraid-ncdu
-unraid-plugin-template:
+               |-----handy-ruler------------------------------------------------------|
+unraid-ddrescue: unraid-ddrescue
+unraid-ddrescue:
+unraid-ddrescue: Copies data from one file or block device to another, 
+unraid-ddrescue: trying to rescue the good parts first in case of read errors.
+unraid-ddrescue: 
+unraid-ddrescue: Built from https://www.gnu.org/software/ddrescue/
+unraid-ddrescue: https://github.com/dkaser/unraid-ddrescue
+unraid-ddrescue:
