@@ -1,0 +1,68 @@
+<?xml version='1.0' standalone='yes'?>
+<!DOCTYPE PLUGIN>
+
+<PLUGIN 
+  name="ddrescue"
+  author="Derek Kaser"
+  version="2025.07.17"
+  
+  pluginURL="https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg"
+  support="https://forums.unraid.net/topic/192095-plugin-ddrescue/"
+  min="7.0.0"
+  
+  icon="life-ring"
+>
+
+<CHANGES>
+<![CDATA[
+
+### 2025.07.17
+
+- Initial release
+
+
+For older releases, see https://github.com/dkaser/unraid-ddrescue/releases
+]]>
+</CHANGES>
+
+<FILE Name="/boot/config/plugins/ddrescue/unraid-ddrescue-2025.07.17-noarch-1.txz">
+<URL>https://github.com/dkaser/unraid-ddrescue/releases/download/2025.07.17/unraid-ddrescue-2025.07.17-noarch-1.txz</URL>
+<SHA256>1df5e4909a0a44605dad000e1db94c7ea2f2a46f966bae51c6577c3ad3d64d19</SHA256>
+</FILE>
+
+<!--
+The 'install' script.
+-->
+<FILE Run="/bin/bash">
+<INLINE>
+<![CDATA[
+upgradepkg --install-new /boot/config/plugins/ddrescue/unraid-ddrescue-2025.07.17-noarch-1.txz
+
+# cleanup old versions
+rm -f $(ls /boot/config/plugins/ddrescue/unraid-ddrescue-*.txz 2>/dev/null | grep -v '2025.07.17')
+
+echo ""
+echo "----------------------------------------------------"
+echo " ddrescue has been installed."
+echo " Version: 2025.07.17"
+echo "----------------------------------------------------"
+echo ""
+]]>
+</INLINE>
+</FILE>
+
+<!--
+The 'remove' script.
+-->
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+<![CDATA[
+removepkg unraid-ddrescue
+
+rm -rf /usr/local/emhttp/plugins/ddrescue
+rm -rf /boot/config/plugins/ddrescue
+]]>
+</INLINE>
+</FILE>
+
+</PLUGIN>
