@@ -1,0 +1,8 @@
+{
+    "name": "ddrescue",
+    "package_name": "unraid-ddrescue",
+    "author": "Derek Kaser",
+    "min": "7.0.0",
+    "icon": "life-ring",
+    "support": "https://forums.unraid.net/topic/192095-plugin-ddrescue/"
+}
