@@ -4,7 +4,7 @@
 <PLUGIN 
   name="ddrescue"
   author="Derek Kaser"
-  version="2025.07.18"
+  version="2026.01.07"
   
   pluginURL="https://raw.githubusercontent.com/dkaser/unraid-ddrescue/main/plugin/ddrescue.plg"
   support="https://forums.unraid.net/topic/192095-plugin-ddrescue/"
@@ -15,6 +15,10 @@
 
 <CHANGES>
 <![CDATA[
+
+### 2026.01.07
+
+- Update ddrescue to v1.30
 
 ### 2025.07.18
 
@@ -29,9 +33,9 @@ For older releases, see https://github.com/dkaser/unraid-ddrescue/releases
 ]]>
 </CHANGES>
 
-<FILE Name="/boot/config/plugins/ddrescue/unraid-ddrescue-2025.07.18-noarch-1.txz">
-<URL>https://github.com/dkaser/unraid-ddrescue/releases/download/2025.07.18/unraid-ddrescue-2025.07.18-noarch-1.txz</URL>
-<SHA256>aa43c79114079ebf60fa0a4da886a38f6e561ab38f880449bcce1f09d4b4a386</SHA256>
+<FILE Name="/boot/config/plugins/ddrescue/unraid-ddrescue-2026.01.07-noarch-1.txz">
+<URL>https://github.com/dkaser/unraid-ddrescue/releases/download/2026.01.07/unraid-ddrescue-2026.01.07-noarch-1.txz</URL>
+<SHA256>4040b978a20f8f87cffb0c0cb9e913aa3c36e7ca14718df2d8acd61206781ea1</SHA256>
 </FILE>
 
 <!--
@@ -40,15 +44,15 @@ The 'install' script.
 <FILE Run="/bin/bash">
 <INLINE>
 <![CDATA[
-upgradepkg --install-new /boot/config/plugins/ddrescue/unraid-ddrescue-2025.07.18-noarch-1.txz
+upgradepkg --install-new /boot/config/plugins/ddrescue/unraid-ddrescue-2026.01.07-noarch-1.txz
 
 # cleanup old versions
-rm -f $(ls /boot/config/plugins/ddrescue/unraid-ddrescue-*.txz 2>/dev/null | grep -v '2025.07.18')
+rm -f $(ls /boot/config/plugins/ddrescue/unraid-ddrescue-*.txz 2>/dev/null | grep -v '2026.01.07')
 
 echo ""
 echo "----------------------------------------------------"
 echo " ddrescue has been installed."
-echo " Version: 2025.07.18"
+echo " Version: 2026.01.07"
 echo "----------------------------------------------------"
 echo ""
 ]]>
